@@ -1,10 +1,18 @@
-﻿<!DOCTYPE html>
+﻿@* 
+Layout.cshtml - this is the base layout for the Views in the App. 
+Consists of standard html mark up:
+    head;
+    body; 
+*@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    @* include styles defined in BundleConfig.cs *@
     @Styles.Render("~/Content/css")
+    @* include modernizr defined in BundleConfig.cs *@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -21,23 +29,27 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    @* HTML Helpers to create links (link text, action name, controller name)  *@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
+                @* HTML Helper to render partial Login View *@
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
+        @* Render Page Content *@
         @RenderBody()
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
+    @* include jquery defined in BundleConfig.cs *@
     @Scripts.Render("~/bundles/jquery")
+    @* include bootstrap defined in BundleConfig.cs *@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

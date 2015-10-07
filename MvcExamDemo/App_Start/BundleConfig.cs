@@ -3,6 +3,8 @@ using System.Web.Optimization;
 
 namespace MvcExamDemo
 {
+    // Bundling of Resource Files to reduce footprint on download
+    // Bundle up JavaScript and CSS files
     public class BundleConfig
     {
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
