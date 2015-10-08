@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using MvcExamDemo.Filters;
+using System.Web;
 using System.Web.Mvc;
 
 namespace MvcExamDemo
@@ -11,6 +12,7 @@ namespace MvcExamDemo
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new GlobalFilterAttribute());
         }
     }
 }
