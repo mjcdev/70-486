@@ -12,6 +12,7 @@ Consists of standard html mark up:
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @* include styles defined in BundleConfig.cs *@
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
     @* include modernizr defined in BundleConfig.cs *@
     @Scripts.Render("~/bundles/modernizr")
 
@@ -45,6 +46,7 @@ Consists of standard html mark up:
                             <li>@Html.ActionLink("Inline Razor Syntax", "InlineRazorSyntax", "Demo")</li>                   
                             <li>@Html.ActionLink("Html Helpers", "HtmlHelpers", "Demo")</li>
                             <li>@Html.ActionLink("Using Partial Views", "UsingPartialViews", "Demo")</li>
+                            <li>@Html.ActionLink("JQuery UI", "JQueryUi", "Demo")</li>
                         </ul>
                     </li>
                 </ul>
@@ -63,6 +65,8 @@ Consists of standard html mark up:
     </div>
     @* include jquery defined in BundleConfig.cs *@
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/demo");
     @* include bootstrap defined in BundleConfig.cs *@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

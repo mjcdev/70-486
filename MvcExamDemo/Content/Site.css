@@ -27,3 +27,15 @@ textarea {
     background-color:darkslateblue;
     color:black;
 }
+
+#pane{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
+
+#paneContainer{
+    height: 250px;
+    width: 300px;
+    background-color: white;
+}

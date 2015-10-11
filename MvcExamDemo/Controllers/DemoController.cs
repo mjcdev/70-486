@@ -53,5 +53,10 @@ namespace MvcExamDemo.Controllers
         {
             return View();
         }
+
+        public ActionResult JQueryUi()
+        {
+            return View();
+        }
     }
 }
