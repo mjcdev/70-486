@@ -1,0 +1,24 @@
+﻿@{ 
+    ViewBag.Title = "Using Partial Views";
+    ViewBag.Message = "Using MVC 4 Partial Views";
+    var showPartial = Request["Show Partial"];
+}
+<div>
+    <h1>@ViewBag.Title</h1>
+    <h2>@ViewBag.Message</h2>
+</div>
+<article>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true);
+        <div> @Html.Label("Show Partial")</div>
+        <div> @Html.CheckBox("Show Partial")</div>
+        <input type="submit" value="Submit" />
+    }
+</article>
+<article>
+    @if (showPartial != "false")
+    {
+        @Html.Partial("_DemoPartial");
+    }
+</article>

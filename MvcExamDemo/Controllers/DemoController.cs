@@ -43,5 +43,15 @@ namespace MvcExamDemo.Controllers
         {
             return View();
         }
+
+        public ActionResult HtmlHelpers()
+        {
+            return View();
+        }
+
+        public ActionResult UsingPartialViews()
+        {
+            return View();
+        }
     }
 }

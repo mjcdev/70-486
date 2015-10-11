@@ -1,9 +1,8 @@
-﻿@* 
-Layout.cshtml - this is the base layout for the Views in the App. 
-Consists of standard html mark up:
-    head;
-    body; 
+﻿@*
+    Set your Layout in the _ViewStart.cshtml file
 *@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,11 +39,9 @@ Consists of standard html mark up:
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Index", "Index", "Demo")</li>
                             <li>@Html.ActionLink("Alias", "Alias", "Demo")</li>
-                            <li>@Html.ActionLink("Custom Action Filter", "CustomActionFilter", "Demo")</li>  
-                            <li>@Html.ActionLink("Razor Syntax", "RazorSyntax", "Demo")</li>       
-                            <li>@Html.ActionLink("Inline Razor Syntax", "InlineRazorSyntax", "Demo")</li>                   
-                            <li>@Html.ActionLink("Html Helpers", "HtmlHelpers", "Demo")</li>
-                            <li>@Html.ActionLink("Using Partial Views", "UsingPartialViews", "Demo")</li>
+                            <li>@Html.ActionLink("Custom Action Filter", "CustomActionFilter", "Demo")</li>
+                            <li>@Html.ActionLink("Razor Syntax", "RazorSyntax", "Demo")</li>
+                            <li>@Html.ActionLink("Inline Razor Syntax", "InlineRazorSyntax", "Demo")</li>
                         </ul>
                     </li>
                 </ul>
@@ -53,12 +50,12 @@ Consists of standard html mark up:
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content layoutTwo">
         @* Render Page Content *@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Layout Two</p>
         </footer>
     </div>
     @* include jquery defined in BundleConfig.cs *@

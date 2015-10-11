@@ -1,0 +1,58 @@
+﻿@{   
+    ViewBag.Title = "Razor Syntax Demo";
+    string message = string.Empty;
+
+    if (IsPost) // true if HTTP GET
+    {
+        var username = Request["Full Name"];
+        var destination = Request["Destination"];
+
+        message = "Welcome " + username + ".  You have selected " + destination;
+    }
+
+    string htmlString = "<div>text inside html div  - divs removed by Html Helper</div>";
+
+    string htmlStringWithoutDivs = "text without div - div added by Html Helper";
+}
+
+@* Custom HTML Helper *@
+@helper stripHtml(string inputHtml)
+{
+    @System.Text.RegularExpressions.Regex.Replace(inputHtml, "<.*?>", string.Empty);
+}
+
+<div class="title">
+    <h1>@ViewBag.Title</h1>
+    <h2>@ViewBag.Message</h2>
+</div>
+
+<article>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true);
+        <div>
+            @Html.Label("Full Name")
+        </div>
+        <div>
+            @Html.TextBox("Full Name")
+        </div>
+        <div>
+            @Html.Label("Destination")
+        </div>
+        <div>
+            @Html.TextBox("Destination")
+        </div>
+        <input type="submit" value="Submit" />
+    }
+    <p>
+        @message
+    </p>
+
+    <p>
+        @stripHtml(htmlString)
+    </p>
+    <p>
+        @using MvcExamDemo.Helpers
+        @Html.AddDivs(htmlStringWithoutDivs)
+    </p>
+</article>
