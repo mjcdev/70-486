@@ -33,5 +33,15 @@ namespace MvcExamDemo.Controllers
             ViewBag.TestBoolProperty = true;
             return View();
         }
+
+        public ActionResult RazorSyntax()
+        {
+            return View();
+        }
+
+        public ActionResult InlineRazorSyntax()
+        {
+            return View();
+        }
     }
 }

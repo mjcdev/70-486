@@ -1,0 +1,46 @@
+﻿@{ 
+    ViewBag.Title = "Razor Syntax Demo";
+    string message = string.Empty;
+
+    if (IsPost) // true if HTTP GET
+    {
+        var username = Request["fullname"];
+        var destination = Request["destination"];
+
+        message = "Welcome " + username + ".  You have selected " + destination;
+    }
+}
+
+@* This is how to create comments in Razor*@
+
+@* This is how to create Multi-Line
+Comments in Razor*@
+
+@{ 
+    //Comment inside code block just  - C#
+
+    /* Multi Line
+    Comments -C# */
+}
+
+<div class="title">
+    <h1>@ViewBag.Title</h1>
+    <h2>@ViewBag.Message</h2>
+</div>
+
+<article>
+    <form action="" method="post">
+        <p>
+            <label for="fullname">Full Name :</label>
+            <input type="text" name="fullname" />
+        </p>
+        <p>
+            <label for="destination">Destination :</label>
+            <input type="text" name="destination" />
+        </p>
+        <input type="submit" value="Submit" />
+    </form>
+    <p>
+        @message
+    </p>
+</article>
