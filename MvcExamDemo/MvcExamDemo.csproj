@@ -172,6 +172,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RequireAuthorizeController.cs" />
+    <Compile Include="Filters\CustomActionFilterAttribute.cs" />
     <Compile Include="Filters\GlobalFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

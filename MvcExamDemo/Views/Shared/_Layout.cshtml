@@ -34,6 +34,15 @@ Consists of standard html mark up:
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Authorize", "Index", "RequireAuth")</li>
+                    <li class="dropdown">
+                        @* Needed to embed some HTML in to the ActionLink so created the link with HTML instead of the helper, and used Url.Action to create the Url Required in the route *@
+                        <a href="@Url.Action("Index", "Demo")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Demo <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Index", "Index", "Demo")</li>
+                            <li>@Html.ActionLink("Alias", "Alias", "Demo")</li>
+                            <li>@Html.ActionLink("Custom Action Filter", "CustomActionFilter", "Demo")</li>                            
+                        </ul>
+                    </li>
                 </ul>
                 @* HTML Helper to render partial Login View *@
                 @Html.Partial("_LoginPartial")

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcExamDemo.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,19 @@ namespace MvcExamDemo.Controllers
         public ActionResult AliasedAction()
         {
             return Content("This Action is accessible via it's alias - Alias.");
+        }
+        
+        [CustomActionFilter]
+        public ActionResult CustomActionFilter()
+        {
+            return Content("Custom Action Filter Overrides Firing on this Action");
+        }
+
+        public ActionResult ViewBagAction()
+        {
+            ViewBag.TestViewBagProperty = "Adding to the ViewBag";
+            ViewBag.TestBoolProperty = true;
+            return View();
         }
     }
 }
