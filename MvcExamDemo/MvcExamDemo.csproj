@@ -227,6 +227,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\DemoJQueryAjax.js" />
     <Content Include="Scripts\DemoJQueryUi.js" />
     <Content Include="Scripts\DemoJQuery.js" />
     <Content Include="Scripts\DemoFunctions.js" />
@@ -237,6 +238,8 @@
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -287,6 +290,8 @@
     <Content Include="Views\Demo\UsingPartialViews.cshtml" />
     <Content Include="Views\Demo\JQueryUi.cshtml" />
     <Content Include="Views\Demo\JQuery.cshtml" />
+    <Content Include="Views\Demo\JQueryAjax.cshtml" />
+    <Content Include="Views\Demo\JQueryAjaxEndpoint.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

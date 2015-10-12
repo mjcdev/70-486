@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "JQuery Ajax";
+}
+
+<div>
+    <h1>@ViewBag.Title</h1>
+    <h2>@ViewBag.Message</h2>
+</div>
+
+<div>
+    <input type="button" value="Call Service with Ajax" id="btnRequest" />
+</div>
+<div id="resultContainer" />
+
+@Scripts.Render("~/bundles/demoJQueryAjax")

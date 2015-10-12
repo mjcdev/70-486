@@ -17,7 +17,8 @@ namespace MvcExamDemo
                         "~/Scripts/jquery-ui-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+                        "~/Scripts/jquery.validate*",
+                        "~/Scripts/jquery.unobtrusive*"));
 
             bundles.Add(new ScriptBundle("~/bundles/demo").Include(
                         "~/Scripts/DemoFunctions.js"));
@@ -27,6 +28,9 @@ namespace MvcExamDemo
 
             bundles.Add(new ScriptBundle("~/bundles/demoJQueryUi").Include(
                         "~/Scripts/DemoJQueryUi.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/demoJQueryAjax").Include(
+                        "~/Scripts/DemoJQueryAjax.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.

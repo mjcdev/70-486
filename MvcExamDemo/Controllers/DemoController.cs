@@ -64,5 +64,17 @@ namespace MvcExamDemo.Controllers
             ViewBag.Message = "Modifying UI with JQuery";
             return View();
         }
+
+        public ActionResult JQueryAjax()
+        {
+            ViewBag.Message = "JQuery Ajax";
+            return View();
+        }
+
+        public ActionResult JQueryAjaxEndpoint()
+        {
+            ViewBag.Message = "JQuery Ajax Endpoint";
+            return View();
+        }
     }
 }

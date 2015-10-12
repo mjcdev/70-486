@@ -16,6 +16,13 @@ Consists of standard html mark up:
     @* include modernizr defined in BundleConfig.cs *@
     @Scripts.Render("~/bundles/modernizr")
 
+    @* include jquery defined in BundleConfig.cs *@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/demo")
+    @* include bootstrap defined in BundleConfig.cs *@
+    @Scripts.Render("~/bundles/bootstrap")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -48,6 +55,7 @@ Consists of standard html mark up:
                             <li>@Html.ActionLink("Using Partial Views", "UsingPartialViews", "Demo")</li>
                             <li>@Html.ActionLink("JQuery UI", "JQueryUi", "Demo")</li>
                             <li>@Html.ActionLink("JQuery", "JQuery", "Demo")</li>
+                            <li>@Html.ActionLink("JQuery Ajax", "JQueryAjax", "Demo")</li>
                         </ul>
                     </li>
                 </ul>
@@ -64,12 +72,7 @@ Consists of standard html mark up:
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-    @* include jquery defined in BundleConfig.cs *@
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryui")
-    @Scripts.Render("~/bundles/demo");
-    @* include bootstrap defined in BundleConfig.cs *@
-    @Scripts.Render("~/bundles/bootstrap")
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
