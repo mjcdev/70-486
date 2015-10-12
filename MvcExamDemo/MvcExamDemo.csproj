@@ -284,6 +284,7 @@
     <Content Include="Views\Demo\_DemoPartial.cshtml" />
     <Content Include="Views\Demo\UsingPartialViews.cshtml" />
     <Content Include="Views\Demo\JQueryUi.cshtml" />
+    <Content Include="Views\Demo\JQuery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

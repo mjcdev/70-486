@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "JQuery";
+}
+
+<div>
+    <h1>@ViewBag.Title</h1>
+    <h2>@ViewBag.Message</h2>
+</div>
+
+<div>
+    <button id="btnCss" onclick="changeStyle()">Change Style</button>
+    <button id="btnClear" onclick="clearAll()">Clear Changes</button>
+</div>
+<div>
+    Enter a message: <input type="text" id="field1" />
+    <input type="submit" value="Submit Message" onclick="changeVal()" />
+</div>
+
+<p id="display">Sample message appears here</p>
+
+
+<article>
+    <p>Click on the lists to expand and contract them using JQuery Toggle Effects</p>
+    <div id="list1Container" onclick="toggleList1()">
+        List 1
+        <ul id="list1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </div>
+    <div id="list2Container" onclick="toggleList2()">
+        List 2
+        <ul id="list2">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </div>
+</article>

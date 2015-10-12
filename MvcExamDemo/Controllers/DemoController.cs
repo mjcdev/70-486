@@ -58,5 +58,11 @@ namespace MvcExamDemo.Controllers
         {
             return View();
         }
+
+        public ActionResult JQuery()
+        {
+            ViewBag.Message = "Modifying UI with JQuery";
+            return View();
+        }
     }
 }
