@@ -39,3 +39,15 @@ textarea {
     width: 300px;
     background-color: white;
 }
+
+.pane{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: aquamarine;
+}
+#validArea{
+    height: 350px;
+    width: 400px;
+    background-color: white;
+}
