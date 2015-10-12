@@ -22,3 +22,21 @@
         }
     });
 })
+
+$("#btn1").click(function () {
+    $.ajax({
+        url: "JQueryAjaxPartial",
+        type: "POST",
+        success: function (result) {            
+            $("#XHResponse").html(result);
+        },
+        error: function (xhr, status, error) {
+            var errorMsg = "Request Failed: " + error;
+            $("#XHResponse").html(errorMsg);
+        },
+        complete: function (xhr, status) {
+            var doneMsg = "Finished with status: " + status;
+            alert(doneMsg);
+        }
+    });
+})

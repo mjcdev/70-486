@@ -12,4 +12,21 @@
 </div>
 <div id="resultContainer" />
 
+<div>
+    <input type="button" value="Retrieve Response" id="btn1" />
+</div>
+<div id="XHResponse">Placeholder</div>
+
+
+@Ajax.ActionLink(
+    "Click to Send Ajax Request",
+    "AjaxHelper",
+    new AjaxOptions
+    {
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "ajaxHelperResultContainer"
+    })
+<div id="ajaxHelperResultContainer">Ajax Helper Result Container</div>
+
 @Scripts.Render("~/bundles/demoJQueryAjax")

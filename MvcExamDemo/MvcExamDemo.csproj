@@ -292,6 +292,8 @@
     <Content Include="Views\Demo\JQuery.cshtml" />
     <Content Include="Views\Demo\JQueryAjax.cshtml" />
     <Content Include="Views\Demo\JQueryAjaxEndpoint.cshtml" />
+    <Content Include="Views\Demo\_JQueryAjaxPartial.cshtml" />
+    <Content Include="Views\Demo\AjaxHelper.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -76,5 +76,18 @@ namespace MvcExamDemo.Controllers
             ViewBag.Message = "JQuery Ajax Endpoint";
             return View();
         }
+
+        public PartialViewResult JQueryAjaxPartial()
+        {
+            ViewBag.Details = "Information Here";
+            return PartialView("_JQueryAjaxPartial");
+        }
+
+        public ActionResult AjaxHelper()
+        {
+            ViewBag.Title = "Ajax Helper";
+            ViewBag.PageContent = "Ajax Helper Page";
+            return View("AjaxHelper");
+        }
     }
 }
