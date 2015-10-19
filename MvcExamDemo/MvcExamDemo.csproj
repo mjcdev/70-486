@@ -179,6 +179,7 @@
     </Compile>
     <Compile Include="Helpers\CustomHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DynamicCacheDemo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -294,6 +295,10 @@
     <Content Include="Views\Demo\JQueryAjaxEndpoint.cshtml" />
     <Content Include="Views\Demo\_JQueryAjaxPartial.cshtml" />
     <Content Include="Views\Demo\AjaxHelper.cshtml" />
+    <Content Include="Views\Demo\OutputCache.cshtml" />
+    <Content Include="Views\Demo\HttpCache.cshtml" />
+    <Content Include="Views\Demo\DynamicCache.cshtml" />
+    <Content Include="Views\Demo\OutputCacheProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

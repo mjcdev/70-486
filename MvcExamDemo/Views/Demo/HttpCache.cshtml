@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Http Cache";
+
+    //Http Cache
+    Response.Cache.SetCacheability(HttpCacheability.Public);
+    Response.Cache.SetExpires(DateTime.Now.AddSeconds(15));
+    Response.Cache.SetValidUntilExpires(true);
+    Response.Cache.VaryByParams["None"] = true;
+}
+
+<div>
+    <h1>@ViewBag.Title</h1>
+    <h2>Current Time is (or was!) : @ViewBag.Message</h2>
+</div>

@@ -1,0 +1,13 @@
+﻿@using MvcExamDemo.Models;
+@{
+    ViewBag.Title = "Dynamic Cache";
+}
+
+<div>
+    <h1>@ViewBag.Title</h1>
+    <h2>Current Time is (or was!) : @ViewBag.Message</h2>
+</div>
+
+<div>
+    Random Post Caching Text : @{ Response.WriteSubstitution(DynamicCacheDemo.RenderItem); }
+</div>

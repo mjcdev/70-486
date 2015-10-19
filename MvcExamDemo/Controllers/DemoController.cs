@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace MvcExamDemo.Controllers
 {
@@ -88,6 +90,39 @@ namespace MvcExamDemo.Controllers
             ViewBag.Title = "Ajax Helper";
             ViewBag.PageContent = "Ajax Helper Page";
             return View("AjaxHelper");
+        }
+
+        [OutputCache(Duration = 20,
+            Location = OutputCacheLocation.Any,
+            VaryByCustom = "browser",
+            VaryByParam = "none")]
+        public ActionResult OutputCache()
+        {
+            ViewBag.Message = DateTime.Now.ToString();
+            return View();
+        }
+
+        public ActionResult HttpCache()
+        {
+            ViewBag.Message = DateTime.Now.ToString();
+            return View();
+        }
+
+        [OutputCache(Duration = 20,
+            Location = OutputCacheLocation.Any,
+            VaryByCustom = "browser",
+            VaryByParam = "none")]
+        public ActionResult DynamicCache()
+        {
+            ViewBag.Message = DateTime.Now.ToString();
+            return View();
+        }
+
+        [OutputCache(CacheProfile="shortCache")]
+        public ActionResult OutputCacheProfile()
+        {
+            ViewBag.Message = DateTime.Now.ToString();
+            return View();
         }
     }
 }
