@@ -299,6 +299,12 @@
     <Content Include="Views\Demo\HttpCache.cshtml" />
     <Content Include="Views\Demo\DynamicCache.cshtml" />
     <Content Include="Views\Demo\OutputCacheProfile.cshtml" />
+    <Content Include="Views\Shared\_Layout.Mobile.cshtml" />
+    <Content Include="Views\Home\Index.Mobile.cshtml" />
+    <Content Include="Views\Shared\_Layout.iPhone.cshtml" />
+    <Content Include="Views\Home\Index.iPhone.cshtml" />
+    <Content Include="Views\Shared\_Layout.iPad.cshtml" />
+    <Content Include="Views\Home\Index.iPad.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
