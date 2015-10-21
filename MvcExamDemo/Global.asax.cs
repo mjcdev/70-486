@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MvcExamDemo.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -18,6 +20,11 @@ namespace MvcExamDemo
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             BundleMobileConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer<LocalDbContext>(new LocalDbInitializer());
+
+            LocalDbContext context = new LocalDbContext();
+            context.Database.Initialize(true);
 
             DisplayModeProvider.Instance.Modes.Insert(0, new DefaultDisplayMode("iPhone")
             {

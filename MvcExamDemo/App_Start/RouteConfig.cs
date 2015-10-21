@@ -32,6 +32,12 @@ namespace MvcExamDemo
                 url: "controller/{action}/{id}",
                 defaults: new { controller = "Demo", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "ModelDemo",
+                url: "controller/{action}/{id}",
+                defaults: new { controller = "ModelDemo", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }

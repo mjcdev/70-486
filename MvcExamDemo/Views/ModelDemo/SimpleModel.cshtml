@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Simple Model";
+}
+
+<div>
+    <h1>@ViewBag.Title</h1>
+    <h2>@ViewBag.Message</h2>
+</div>
+
+<div>
+    <div>
+        Name : @Model.Name
+    </div>
+    <div>
+        Location : @Model.Location
+    </div>
+    <div>
+        Website : <a href="@Model.Website">@Model.Website</a>
+    </div>
+</div>

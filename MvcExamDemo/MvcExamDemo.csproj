@@ -169,9 +169,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CitiesController.cs" />
+    <Compile Include="Controllers\CountriesController.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ModelDemoController.cs" />
     <Compile Include="Controllers\RequireAuthorizeController.cs" />
     <Compile Include="Controllers\ViewSwitcherController.cs" />
     <Compile Include="Filters\CustomActionFilterAttribute.cs" />
@@ -181,9 +184,12 @@
     </Compile>
     <Compile Include="Helpers\CustomHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\LocalDbContext.cs" />
+    <Compile Include="Models\LocalDbInitializer.cs" />
     <Compile Include="Models\DynamicCacheDemo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SimpleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -323,6 +329,18 @@
     <Content Include="Views\Shared\_Layout.iPad.cshtml" />
     <Content Include="Views\Home\Index.iPad.cshtml" />
     <Content Include="Views\Shared\_ViewSwitcher.cshtml" />
+    <Content Include="Views\ModelDemo\Index.cshtml" />
+    <Content Include="Views\ModelDemo\SimpleModel.cshtml" />
+    <Content Include="Views\Countries\Create.cshtml" />
+    <Content Include="Views\Countries\Delete.cshtml" />
+    <Content Include="Views\Countries\Details.cshtml" />
+    <Content Include="Views\Countries\Edit.cshtml" />
+    <Content Include="Views\Countries\Index.cshtml" />
+    <Content Include="Views\Cities\Create.cshtml" />
+    <Content Include="Views\Cities\Delete.cshtml" />
+    <Content Include="Views\Cities\Details.cshtml" />
+    <Content Include="Views\Cities\Edit.cshtml" />
+    <Content Include="Views\Cities\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
