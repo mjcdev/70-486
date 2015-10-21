@@ -17,6 +17,7 @@ namespace MvcExamDemo
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            BundleMobileConfig.RegisterBundles(BundleTable.Bundles);
 
             DisplayModeProvider.Instance.Modes.Insert(0, new DefaultDisplayMode("iPhone")
             {

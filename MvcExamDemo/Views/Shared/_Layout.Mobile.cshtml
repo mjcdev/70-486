@@ -13,6 +13,7 @@ Consists of standard html mark up:
     @* include styles defined in BundleConfig.cs *@
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/themes/base/css")
+    @Styles.Render("/Content/Mobile/css", "~/Content/jquerymobile/css")
     @* include modernizr defined in BundleConfig.cs *@
     @Scripts.Render("~/bundles/modernizr")
 
@@ -20,55 +21,61 @@ Consists of standard html mark up:
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery", "~/bundles/jquerymobile")
     @Scripts.Render("~/bundles/demo")
     @* include bootstrap defined in BundleConfig.cs *@
     @Scripts.Render("~/bundles/bootstrap")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("70-486", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    @* HTML Helpers to create links (link text, action name, controller name)  *@
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Authorize", "Index", "RequireAuth")</li>
-                    <li class="dropdown">
-                        @* Needed to embed some HTML in to the ActionLink so created the link with HTML instead of the helper, and used Url.Action to create the Url Required in the route *@
-                        <a href="@Url.Action("Index", "Demo")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Demo <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Index", "Index", "Demo")</li>
-                            <li>@Html.ActionLink("Alias", "Alias", "Demo")</li>
-                            <li>@Html.ActionLink("Custom Action Filter", "CustomActionFilter", "Demo")</li>  
-                            <li>@Html.ActionLink("Razor Syntax", "RazorSyntax", "Demo")</li>       
-                            <li>@Html.ActionLink("Inline Razor Syntax", "InlineRazorSyntax", "Demo")</li>                   
-                            <li>@Html.ActionLink("Html Helpers", "HtmlHelpers", "Demo")</li>
-                            <li>@Html.ActionLink("Using Partial Views", "UsingPartialViews", "Demo")</li>
-                            <li>@Html.ActionLink("JQuery UI", "JQueryUi", "Demo")</li>
-                            <li>@Html.ActionLink("JQuery", "JQuery", "Demo")</li>
-                            <li>@Html.ActionLink("JQuery Ajax", "JQueryAjax", "Demo")</li>
-                            <li>@Html.ActionLink("Output Cache", "OutputCache", "Demo")</li>
-                            <li>@Html.ActionLink("HTTP Cache", "HttpCache", "Demo")</li>
-                            <li>@Html.ActionLink("Dynamic Cache", "DynamicCache", "Demo")</li>
-                            <li>@Html.ActionLink("Output Cache Profile", "OutputCacheProfile", "Demo")</li>
-                        </ul>
-                    </li>
-                </ul>
-                @* HTML Helper to render partial Login View *@
-                @Html.Partial("_LoginPartial")
+    <div data-role="page" data-theme="a">
+        @Html.Partial("_ViewSwitcher")
+    
+
+        <div class="navbar navbar-inverse navbar-fixed-top" data-role="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("70-486", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        @* HTML Helpers to create links (link text, action name, controller name)  *@
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Authorize", "Index", "RequireAuth")</li>
+                        <li class="dropdown">
+                            @* Needed to embed some HTML in to the ActionLink so created the link with HTML instead of the helper, and used Url.Action to create the Url Required in the route *@
+                            <a href="@Url.Action("Index", "Demo")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Demo <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Index", "Index", "Demo")</li>
+                                <li>@Html.ActionLink("Alias", "Alias", "Demo")</li>
+                                <li>@Html.ActionLink("Custom Action Filter", "CustomActionFilter", "Demo")</li>
+                                <li>@Html.ActionLink("Razor Syntax", "RazorSyntax", "Demo")</li>
+                                <li>@Html.ActionLink("Inline Razor Syntax", "InlineRazorSyntax", "Demo")</li>
+                                <li>@Html.ActionLink("Html Helpers", "HtmlHelpers", "Demo")</li>
+                                <li>@Html.ActionLink("Using Partial Views", "UsingPartialViews", "Demo")</li>
+                                <li>@Html.ActionLink("JQuery UI", "JQueryUi", "Demo")</li>
+                                <li>@Html.ActionLink("JQuery", "JQuery", "Demo")</li>
+                                <li>@Html.ActionLink("JQuery Ajax", "JQueryAjax", "Demo")</li>
+                                <li>@Html.ActionLink("Output Cache", "OutputCache", "Demo")</li>
+                                <li>@Html.ActionLink("HTTP Cache", "HttpCache", "Demo")</li>
+                                <li>@Html.ActionLink("Dynamic Cache", "DynamicCache", "Demo")</li>
+                                <li>@Html.ActionLink("Output Cache Profile", "OutputCacheProfile", "Demo")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    @* HTML Helper to render partial Login View *@
+                    @Html.Partial("_LoginPartial")
+                </div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" data-role="content">
         @* Render Page Content *@
         @RenderBody()
         <hr />
