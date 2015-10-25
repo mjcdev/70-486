@@ -1,4 +1,5 @@
 ﻿using MvcExamDemo.Models;
+using MvcExamDemo.Models.Binders;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -35,6 +36,8 @@ namespace MvcExamDemo
             {
                 ContextCondition = (ctx => ctx.GetOverriddenUserAgent().IndexOf("iPad", StringComparison.OrdinalIgnoreCase) >= 0)
             });
+
+            ModelBinders.Binders.Add(typeof(CustomModelBinderModel), new CustomModelBinderModelCustomBinder());
         }
     }
 }

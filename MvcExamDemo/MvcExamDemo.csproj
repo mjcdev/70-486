@@ -184,6 +184,8 @@
     </Compile>
     <Compile Include="Helpers\CustomHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Binders\CustomModelBinderModelCustomBinder.cs" />
+    <Compile Include="Models\CustomModelBinderModel.cs" />
     <Compile Include="Models\DataValidationAnnotationModel.cs" />
     <Compile Include="Models\LocalDbContext.cs" />
     <Compile Include="Models\LocalDbInitializer.cs" />
