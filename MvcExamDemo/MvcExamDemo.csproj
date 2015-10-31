@@ -168,6 +168,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\DemoArea\Controllers\DemoHomeController.cs" />
+    <Compile Include="Areas\DemoArea\DemoAreaAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\CountriesController.cs" />
@@ -199,6 +201,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Areas\DemoArea\Views\web.config" />
+    <Content Include="Areas\DemoArea\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\DemoArea\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\DemoArea\Views\DemoHome\Index.cshtml" />
     <None Include="Content\Content.txt" />
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\ajax-loader.png" />
@@ -256,6 +262,10 @@
     <Content Include="Scripts\DemoJQueryUi.js" />
     <Content Include="Scripts\DemoJQuery.js" />
     <Content Include="Scripts\DemoFunctions.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -348,6 +358,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\DemoArea\Models\" />
     <Folder Include="Views\RequireAuthorize\" />
   </ItemGroup>
   <ItemGroup>
