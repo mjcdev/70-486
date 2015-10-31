@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcExamDemo", "MvcExamDemo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcExamdemo.Tests", "MvcExamdemo.Tests\MvcExamdemo.Tests.csproj", "{1B41F143-616C-41B5-81C5-EA796620DB94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiExamDemo", "WebApiExamDemo\WebApiExamDemo.csproj", "{4BBE96FE-27FD-4E77-9426-939C96C6CD8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1B41F143-616C-41B5-81C5-EA796620DB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B41F143-616C-41B5-81C5-EA796620DB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B41F143-616C-41B5-81C5-EA796620DB94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BBE96FE-27FD-4E77-9426-939C96C6CD8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BBE96FE-27FD-4E77-9426-939C96C6CD8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BBE96FE-27FD-4E77-9426-939C96C6CD8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BBE96FE-27FD-4E77-9426-939C96C6CD8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
